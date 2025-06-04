@@ -9,6 +9,7 @@ import { ModelModule } from './model/model.module';
 import { TypeModule } from './type/type.module';
 import { FeatureModule } from './feature/feature.module';
 import { ProfileModule } from './profile/profile.module';
+import { StatusModule } from './status/status.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { ProfileModule } from './profile/profile.module';
     TypeModule,
     FeatureModule,
     ProfileModule,
+    StatusModule,
   ],
 })
 export class AppModule {}
