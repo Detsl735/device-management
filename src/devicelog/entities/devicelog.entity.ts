@@ -5,8 +5,8 @@ import {
   ManyToOne,
   CreateDateColumn,
 } from 'typeorm';
-import { Device } from 'src/device/entities/device.entity';
-import { Employee } from 'src/employee/entities/employee.entity';
+import { Device } from '../../device/entities/device.entity';
+import { Employee } from '../../employee/entities/employee.entity';
 
 @Entity('devicelog')
 export class DeviceLog {

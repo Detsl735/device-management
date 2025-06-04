@@ -6,8 +6,8 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { Type } from 'src/type/entities/type.entity';
-import { Profile } from 'src/profile/entities/profile.entity';
+import { Type } from '../../type/entities/type.entity';
+import { Profile } from '../../profile/entities/profile.entity';
 
 @Entity('model')
 export class Model {

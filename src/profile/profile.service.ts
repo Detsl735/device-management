@@ -4,8 +4,8 @@ import { Repository, In } from 'typeorm';
 import { Profile } from './entities/profile.entity';
 import { CreateProfileDto } from './dto/create-profile.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
-import { Type } from 'src/type/entities/type.entity';
-import { Feature } from 'src/feature/entities/feature.entity';
+import { Type } from '../type/entities/type.entity';
+import { Feature } from '../feature/entities/feature.entity';
 
 @Injectable()
 export class ProfileService {

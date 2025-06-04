@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { Model } from 'src/model/entities/model.entity';
-import { Employee } from 'src/employee/entities/employee.entity';
-import { Status } from 'src/status/entities/status.entity';
+import { Model } from '../../model/entities/model.entity';
+import { Employee } from '../../employee/entities/employee.entity';
+import { Status } from '../../status/entities/status.entity';
 
 @Entity('device')
 export class Device {

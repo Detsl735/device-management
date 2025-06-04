@@ -2,9 +2,9 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Device } from './entities/device.entity';
 import { In, Not, Repository } from 'typeorm';
-import { Model } from 'src/model/entities/model.entity';
-import { Employee } from 'src/employee/entities/employee.entity';
-import { Status } from 'src/status/entities/status.entity';
+import { Model } from '../model/entities/model.entity';
+import { Employee } from '../employee/entities/employee.entity';
+import { Status } from '../status/entities/status.entity';
 import { CreateDeviceDto } from './dto/create-device.dto';
 import { UpdateDeviceDto } from './dto/update-device.dto';
 
