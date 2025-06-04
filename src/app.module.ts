@@ -10,6 +10,7 @@ import { TypeModule } from './type/type.module';
 import { FeatureModule } from './feature/feature.module';
 import { ProfileModule } from './profile/profile.module';
 import { StatusModule } from './status/status.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { StatusModule } from './status/status.module';
       synchronize: true,
       autoLoadEntities: true,
     }),
+    ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
     DeviceModule,
     EmployeeModule,
     DevicelogModule,
@@ -32,6 +34,7 @@ import { StatusModule } from './status/status.module';
     FeatureModule,
     ProfileModule,
     StatusModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

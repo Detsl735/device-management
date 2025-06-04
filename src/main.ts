@@ -1,15 +1,20 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { JwtAuthGuard } from './auth/jwt-auth.guard';
+import { Reflector } from '@nestjs/core';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  const reflector = app.get(Reflector);
+  app.useGlobalGuards(new JwtAuthGuard(reflector)); // глобально применяем guard
+
   app.enableCors({
-    origin: ['http://localhost:5173'],
+    origin: ['https://cvfm41-45-134-254-138.ru.tuna.am', '*'],
+    credentials: true,
     methods: 'GET,POST,PATCH,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
-    credentials: true,
   });
 
   const config = new DocumentBuilder()
