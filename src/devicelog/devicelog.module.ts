@@ -8,6 +8,6 @@ import { DevicelogController } from './devicelog.controller';
   imports: [TypeOrmModule.forFeature([DeviceLog])],
   providers: [DevicelogService],
   controllers: [DevicelogController],
-  exports: [DevicelogService],
+  exports: [TypeOrmModule],
 })
 export class DevicelogModule {}

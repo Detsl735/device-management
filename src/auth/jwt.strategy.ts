@@ -14,7 +14,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: any) {
-    // Этот объект будет доступен через @Request().user
-    return { userId: payload.sub, telegramId: payload.telegramId };
+    return { sub: payload.sub, telegramId: payload.telegramId };
   }
 }
