@@ -46,7 +46,7 @@ export class TelegramUpdate {
       await ctx.reply('📦 Устройство передано');
     }
 
-    if (action === 'deny') {
+    if (action === 'reject') {
       await ctx.telegram.sendMessage(
         requester.telegramId,
         '❌ Вам отказали в устройстве',

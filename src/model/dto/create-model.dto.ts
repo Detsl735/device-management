@@ -8,7 +8,7 @@ import {
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateModelDto {
-  @ApiProperty({ example: 'HP EliteBook 840 G8' })
+  @ApiProperty({ example: 'DIR-615' })
   @IsString()
   name: string;
 
@@ -18,7 +18,7 @@ export class CreateModelDto {
 
   @ApiProperty({
     example: [1, 2, 3],
-    description: 'IDs of associated profiles',
+    description: 'ID функциональных возможностей',
     required: false,
   })
   @IsOptional()

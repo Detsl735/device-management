@@ -8,7 +8,7 @@ import {
 } from 'class-validator';
 
 export class CreateProfileDto {
-  @ApiProperty({ example: 'Офисный профиль' })
+  @ApiProperty({ example: 'Оборудование Wi-fi' })
   @IsString()
   name: string;
 
@@ -22,7 +22,7 @@ export class CreateProfileDto {
 
   @ApiProperty({
     example: [1, 3, 5],
-    description: 'IDs of assigned features',
+    description: 'IDs свзанных функциональных возможностей',
     required: false,
   })
   @IsOptional()

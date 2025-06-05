@@ -57,6 +57,7 @@ export class DeviceService {
 
   async findAll(): Promise<Device[]> {
     return this.deviceRepository.find({
+      where: { isDeleted: false },
       relations: ['model', 'employee', 'status'],
     });
   }
@@ -119,7 +120,7 @@ export class DeviceService {
 
     await this.bot.telegram.sendMessage(
       ownerTelegramId,
-      `Пользователь #${requester.firstName}  ${requester.lastName}хочет получить доступ к устройству "${device.serialNum}". Одобрить?`,
+      `Пользователь ${requester.firstName}  ${requester.lastName} хочет получить доступ к устройству "${device.serialNum}". Одобрить?`,
       {
         reply_markup: {
           inline_keyboard: [

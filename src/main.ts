@@ -11,7 +11,7 @@ async function bootstrap() {
   app.useGlobalGuards(new JwtAuthGuard(reflector)); // глобально применяем guard
 
   app.enableCors({
-    origin: ['https://smm4tt-45-134-254-138.ru.tuna.am'],
+    origin: ['https://i8bljl-45-134-254-138.ru.tuna.am'],
     credentials: true,
     methods: 'GET,POST,PATCH,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
